@@ -72,3 +72,6 @@
 - `git merge --abort` — отменить слияние и вернуться к состоянию до него.
 - `git status` — увидеть, какие файлы в конфликте.
 - `git diff --name-only --diff-filter=U` — только конфликтующие файлы.
+- git add README.md
+git commit -m "merge: разрешён конфликт между ветками feature-alice и feature-bob"
+git log --oneline --graph --all
