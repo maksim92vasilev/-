@@ -1,22 +1,74 @@
-# This .gitignore is appropriate for repositories deployed to GitHub Pages and using
-# a Gemfile as specified at https://github.com/github/pages-gem#conventional
+# --- Базовые исключения для всех проектов ---
 
-# Basic Jekyll gitignores (synchronize to Jekyll.gitignore)
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+# Временные файлы ОС
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
 
-# Additional Ruby/bundler ignore for when you run: bundle install
-/vendor
+# Бэкапы и автосохранения редакторов
+*~
+*.bak
+*.backup
+*.swp
+*.swo
+*.tmp
+*.temp
 
-# Specific ignore for GitHub Pages
-# GitHub Pages will always use its own deployed version of pages-gem
-# This means GitHub Pages will NOT use your Gemfile.lock and therefore it is
-# counterproductive to check this file into the repository.
-# Details at https://github.com/github/pages-gem/issues/768
-Gemfile.lock
-git rm --cached FILENAME
-ignore
-~/.config/git
-~/.config/git/ignore
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-z][a-z]
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains (IntelliJ IDEA, PyCharm, WebStorm и др.)
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Atom
+.atom/
+
+# Emacs
+*#
+.\#*
+
+# --- Специфика для тренировки Git-конфликтов ---
+
+# Файлы-бэкапы, которые создаёт sed (если будешь запускать скрипт на macOS/Linux)
+*.bak
+
+# Любые автогенерируемые файлы, которые могут появиться в процессе тренировки
+/generated/
+/tmp/
+
+# --- Прочее (опционально, можно убрать, если не нужно) ---
+
+# Логи и кэш
+/logs/
+/log/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Артефакты сборки (если позже добавишь компилируемые языки)
+/build/
+/dist/
+/node_modules/
+/vendor/
+
+git add .gitignore
+git commit -m "chore: added .gitignore to exclude temp files and editor backups"
